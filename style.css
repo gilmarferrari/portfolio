@@ -103,7 +103,7 @@
 }
 
 .caption {
-    animation: color-main-change 1s infinite;
+    animation: color-cc-change 1s infinite;
     justify-content: center;
     align-items: center;
     font-size: 15px;
