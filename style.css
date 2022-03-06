@@ -14,7 +14,7 @@
     align-items: center;
     vertical-align: bottom;
     border-top: 0.4px solid white;
-    background-color: #53435a;
+    background-color: #18283d;
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -23,7 +23,7 @@
 }
 
 .body {
-    background: linear-gradient(90deg, #4f5479 10%, #180347 90%);
+    background: linear-gradient(-45deg, #8097d4 10%, #122c4e 90%);
 }
 
 .content { 
@@ -96,17 +96,20 @@
 }
 
 .subtitle-animated {
-    animation: color-cc-change 1s infinite;
+    animation: color-section-change 3s infinite;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 12px;
 }
 
 .caption {
-    animation: color-cc-change 1s infinite;
-    justify-content: center;
-    align-items: center;
+    color: white;
     font-size: 15px;
+}
+
+.caption-highlight {
+    color: darkorange;
+    font-size: 12px;
 }
 
 .content-text {
@@ -136,7 +139,7 @@
     border-radius: 50%;
     height: 10em;
     border: white;
-    border-width: 5px;
+    border-width: 3px;
     border-style: solid;
 }
 
@@ -144,16 +147,47 @@
     background-color: transparent;
 }
 
-@keyframes color-main-change {
-    0% { color: green; }
-    25% { color: orange; }
-    50% { color: blue; }
-    75% { color: plum; }
-    100% { color: red; }
+.carousel-item:hover {
+    animation: pop 500ms forwards;
 }
 
-@keyframes color-cc-change {
-    0% { color: white; }
-    50% { color: wheat; }
-    100% { color: white; }
+.image-carousel {
+    gap: 15px;
+    padding: 10px;
+    max-width: 60%;
+    overflow-x: scroll;
+    margin-left: 40px;    
+    margin-right: 40px;
+}
+
+.img-slide {
+    max-height: 200px;
+    width: 350px;
+    object-fit: contain;
+    border: 1px dashed white;
+}
+
+a {
+    color: transparent;
+}
+
+@keyframes color-section-change {
+    0% { 
+        color: white;
+    }
+    50% { 
+        color: darkorange;
+    }
+    to { 
+        color: white;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-10px);
+    }
 }
