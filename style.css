@@ -131,6 +131,10 @@
     text-align: end;
 }
 
+.align-middle {
+    align-items: center;
+}
+
 .font {
     font-family: 'JetBrains Mono';
 }
@@ -165,6 +169,10 @@
     width: 350px;
     object-fit: contain;
     border: 1px dashed white;
+}
+
+.gap-sm {
+    gap: 10px;
 }
 
 a {

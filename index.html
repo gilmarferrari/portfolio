@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gilmar Ferrari Filho</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="script.js"></script>
 </head>
 
@@ -41,7 +42,8 @@
         <span class="divider"></span>
 
         <div class="row image-carousel">
-            <a class="align-center carousel-item" href="https://github.com/gilmarferrari/Projects/blob/main/Collapsus%20Lost%20Legacy%200.18.2.rar?raw=true">
+            <a class="align-center carousel-item"
+                href="https://github.com/gilmarferrari/Projects/blob/main/Collapsus%20Lost%20Legacy%200.18.2.rar?raw=true">
                 <img class="img-slide" src="assets/collapsus-lost-legacy.png">
                 <h1 class="caption font">Collapsus: Lost Legacy</h1>
                 <strong class="caption-highlight font">VIDEO GAME</strong>
@@ -51,12 +53,14 @@
                 <h1 class="caption font">Página Collapsus: Lost Legacy</h1>
                 <strong class="caption-highlight font">LANDING PAGE</strong>
             </a>
-            <a class="align-center carousel-item" href="https://github.com/gilmarferrari/Projects/blob/main/Coastal%20Collapse.apk?raw=true">
+            <a class="align-center carousel-item"
+                href="https://github.com/gilmarferrari/Projects/blob/main/Coastal%20Collapse.apk?raw=true">
                 <img class="img-slide" src="assets/coastal-collapse.png">
                 <h1 class="caption font">Coastal Collapse (Android)</h1>
                 <strong class="caption-highlight font">VIDEO GAME</strong>
             </a>
-            <a class="align-center carousel-item" href="https://github.com/gilmarferrari/Assets/blob/main/Coastal%20Collapse.rar?raw=true">
+            <a class="align-center carousel-item"
+                href="https://github.com/gilmarferrari/Assets/blob/main/Coastal%20Collapse.rar?raw=true">
                 <img class="img-slide" src="assets/coastal-collapse.png">
                 <h1 class="caption font">Coastal Collapse (PC)</h1>
                 <strong class="caption-highlight font">VIDEO GAME</strong>
@@ -65,6 +69,11 @@
                 <img class="img-slide" src="assets/hash-v.png">
                 <h1 class="caption font">HashV</h1>
                 <strong class="caption-highlight font">SOFTWARE</strong>
+            </div>
+            <div class="align-center carousel-item">
+                <img class="img-slide" src="assets/soon.png">
+                <h1 class="caption font">SOON</h1>
+                <strong class="caption-highlight font">SOON</strong>
             </div>
         </div>
 
@@ -76,11 +85,41 @@
 
     <footer class="footer">
         <nav class="nav">
-            <a class="nav-item font" href="https://github.com/gilmarferrari">GitHub</a>
-            <a class="nav-item font" href="mailto:business.gilmarferrari@gmail.com">E-mail</a>
+            <a href="mailto:business.gilmarferrari@gmail.com" class="row align-middle gap-sm">
+                <i class="material-icons content-text">email</i>
+                <label class="content-text font">E-mail</label>
+            </a>
+            <a href="https://github.com/gilmarferrari" class="row align-middle gap-sm">
+                <i class="material-icons content-text">code</i>
+                <label class="content-text font">GitHub</label>
+            </a>
+            <a href="" onclick="changeLanguage()" class="row align-middle gap-sm">
+                <i class="material-icons content-text">language</i>
+                <label class="content-text font">PT-BR</label>
+            </a>
         </nav>
     </footer>
 
 </body>
+
+<script>
+    function changeLanguage() {
+        var language = localStorage.getItem('language');
+
+        switch (language) {
+            case 'English':
+                language = 'Portuguese'
+                break;
+            case 'Portuguese':
+                language = 'English'
+                break;
+            default:
+                language = 'Portuguese'
+                break;
+        }
+
+        localStorage.setItem('language', language);
+    }
+</script>
 
 </html>
