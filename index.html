@@ -7,7 +7,7 @@
     <title>Gilmar Ferrari Filho</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 
 <body class="body">
@@ -18,7 +18,7 @@
 
     <main class="content">
         <a class="img-animated">
-            <img class="img-main"
+            <img class="img-md rounded circle-around"
                 src="https://avatars.githubusercontent.com/u/51145800?s=400&u=c4377fc851d8df904c1a338fd657517a5d014fd9&v=4">
         </a>
         <h1 class="title font">GILMAR FERRARI FILHO</h1>
@@ -51,7 +51,7 @@
             <a class="align-center carousel-item" href="https://gilmarferrari.github.io/Collapsus-Lost-Legacy/">
                 <img class="img-slide" src="assets/collapsus-page.png">
                 <h1 class="caption font">Página Collapsus: Lost Legacy</h1>
-                <strong class="caption-highlight font">LANDING PAGE</strong>
+                <strong class="caption-highlight font">SINGLE PAGE</strong>
             </a>
             <a class="align-center carousel-item"
                 href="https://github.com/gilmarferrari/Projects/blob/main/Coastal%20Collapse.apk?raw=true">
@@ -65,17 +65,23 @@
                 <h1 class="caption font">Coastal Collapse (PC)</h1>
                 <strong class="caption-highlight font">VIDEO GAME</strong>
             </a>
-            <div class="align-center carousel-item">
+            <a class="align-center carousel-item">
                 <img class="img-slide" src="assets/hash-v.png">
                 <h1 class="caption font">HashV</h1>
                 <strong class="caption-highlight font">SOFTWARE</strong>
-            </div>
-            <div class="align-center carousel-item">
+            </a>
+            <a class="align-center carousel-item" href="gilmarferrari.github.io/Dashboard/">
                 <img class="img-slide" src="assets/soon.png">
-                <h1 class="caption font">SOON</h1>
-                <strong class="caption-highlight font">SOON</strong>
-            </div>
+                <h1 class="caption font">Dashboard</h1>
+                <strong class="caption-highlight font">SINGLE PAGE</strong>
+            </a>
         </div>
+
+        <span class="divider"></span>
+
+        <h1 class="subtitle font">TIMELINE</h1>
+        
+        <label class="content-text font">Em breve.</label>
 
         <span class="divider"></span>
 
@@ -101,25 +107,5 @@
     </footer>
 
 </body>
-
-<script>
-    function changeLanguage() {
-        var language = localStorage.getItem('language');
-
-        switch (language) {
-            case 'English':
-                language = 'Portuguese'
-                break;
-            case 'Portuguese':
-                language = 'English'
-                break;
-            default:
-                language = 'Portuguese'
-                break;
-        }
-
-        localStorage.setItem('language', language);
-    }
-</script>
 
 </html>
