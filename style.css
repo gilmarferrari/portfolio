@@ -344,5 +344,6 @@ a {
     to {
         opacity: 0.3;
         border: 0px;
+        background-color: transparent;
     }
 }
