@@ -26,17 +26,11 @@
     background: linear-gradient(-45deg, #8097d4 10%, #122c4e 90%);
 }
 
-.content { 
+.body-align {
     align-items: center;
     display: flex;
     flex-direction: column;
     margin-bottom: 90px;
-}
-
-.nav {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
 }
 
 .space-small {
@@ -73,56 +67,49 @@
 }
 
 .nav-item {
-    color: white;  
+    color: white;
 }
 
 .title {
-    color: white;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
+    font-size: 32px;
 }
 
 .subtitle {
-    color: white;
-    justify-content: center;
-    align-items: center;
     font-size: 22px;
 }
 
 .subtitle-animated {
     animation: color-section-change 3s infinite;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
+    font-size: 22px;
 }
 
 .caption {
-    color: white;
     font-size: 15px;
 }
 
-.caption-highlight {
-    color: darkorange;
+.content {
     font-size: 12px;
 }
 
-.content-text {
+/* Colors */
+
+.white {
     color: white;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
+}
+
+.accent {
+    color: darkorange;
 }
 
 .align-start {
     text-align: start;
 }
 
-.align-center {    
+.align-center {
     text-align: center;
 }
 
-.align-end {    
+.align-end {
     text-align: end;
 }
 
@@ -131,7 +118,15 @@
 }
 
 .font {
-    font-family: 'JetBrains Mono';
+    font-family: "JetBrains Mono";
+}
+
+.light {
+    text-shadow: #d6d6d6 1px 0 10px;
+}
+
+.shadow {
+    text-shadow: black 1px 0 10px;
 }
 
 .img-md {
@@ -151,24 +146,38 @@
     background-color: transparent;
 }
 
-.carousel-item:hover {
-    animation: pop 500ms forwards;
+.block-row {
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.image-carousel {
-    gap: 15px;
-    padding: 10px;
-    max-width: 60%;
-    overflow-x: scroll;
-    margin-left: 40px;    
-    margin-right: 40px;
+.block:hover {
+    animation: pop-card 500ms forwards;
+}
+
+.block:hover .img-slide {
+    animation: 800ms fade-content forwards;
+}
+
+.block:hover .tooltip {
+    display: block;
+    animation: 1s highlight-tooltip forwards;
+}
+
+.tooltip {
+    display: none;
+    opacity: 0;
 }
 
 .img-slide {
     max-height: 200px;
     width: 350px;
     object-fit: contain;
-    border: 1px dashed white;
+    background-color: #18283d67;
+    border-bottom: 3px solid #bebebe;
+    border-left: 1px solid #838383;
+    border-top: 1px solid #838383;
+    border-right: 3px solid #bebebe;
 }
 
 .gap-sm {
@@ -179,8 +188,37 @@
     gap: 20px;
 }
 
+.gap-lg {
+    gap: 30px;
+}
+
 a {
     color: transparent;
+}
+
+.timeline {
+    height: fit-content;
+}
+
+.timeline-period {
+    line-height: 30px;
+    border-right: 1px solid white;
+    width: 130px;
+    padding: 30px;
+    text-align: right;
+}
+
+.timeline-item {
+    padding: 30px;
+    line-height: 30px;
+    width: 70%;
+    border-bottom: 1px solid white;
+}
+
+.timeline-text {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Flexbox */
@@ -220,30 +258,91 @@ a {
 }
 
 .middle {
-    align-items: baseline;
+    align-items: center;
 }
 
 .bottom {
     align-items: flex-end;
 }
 
+.button {
+    padding: 5px;
+}
+
+.puzzle {
+    animation: 5s play infinite;
+}
+
+/* Animations */
+
+.button:hover {
+    animation: pop-button 300ms forwards;
+}
+
 @keyframes color-section-change {
-    0% { 
-        color: white;
+    0% {
+        text-shadow: #d6d6d6 1px 0 10px;
     }
-    50% { 
-        color: darkorange;
+    50% {
+        text-shadow: #474747 1px 0 10px;
     }
-    to { 
-        color: white;
+    to {
+        text-shadow: #d6d6d6 1px 0 10px;
     }
 }
 
-@keyframes pop {
+@keyframes pop-button {
     0% {
         transform: translateY(0%);
     }
     to {
-        transform: translateY(-10px);
+        background-color: darkorange;
+        border-radius: 5px;
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes highlight-tooltip {
+    to {
+        transform: translateY(-20px);
+        opacity: 0.6;
+    }
+}
+
+@keyframes pop-card {
+    0% {
+        transform: translateY(0%);
+    }
+    to {
+        background-color: #051933;
+        padding: 30px;
+        border-radius: 20px;
+    }
+}
+
+@keyframes play {
+    0% {
+        transform: rotateX(0deg);        
+        transform: rotateZ(0deg);
+    }
+    25% {
+        
+        transform: rotateX(180deg);
+    }
+    50% {
+        transform: rotateZ(180deg);
+    }
+    75% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes fade-content {
+    to {
+        opacity: 0.3;
+        border: 0px;
     }
 }
