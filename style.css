@@ -36,6 +36,7 @@
 
 .body {
     background: linear-gradient(-45deg, #8097d4 10%, #122c4e 90%);
+    cursor: default;
 }
 
 .body-align {
@@ -145,6 +146,12 @@
     height: 10em;
 }
 
+.chip {
+    padding: 2px 5px 2px 5px;
+    border-radius: 2px;
+    background-color: darkorange;
+}
+
 .rounded {
     border-radius: 50%;
 }
@@ -166,6 +173,7 @@
 .block {
     background-color: #18283d67;
     padding: 10px;
+    height: max-content;
 }
 
 .block:hover {
@@ -187,7 +195,7 @@
 }
 
 .img-slide {
-    max-height: 200px;
+    height: 200px;
     width: 350px;
     object-fit: contain;
     background-color: #18283d67;
@@ -217,7 +225,7 @@ a {
 .timeline-period {
     line-height: 30px;
     border-right: 1px solid white;
-    width: 130px;
+    width: 15%;
     padding: 30px;
     text-align: right;
 }
@@ -225,7 +233,7 @@ a {
 .timeline-item {
     padding: 30px;
     line-height: 30px;
-    width: 70%;
+    width: 85%;
     border-bottom: 1px solid white;
 }
 
@@ -233,6 +241,30 @@ a {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
+}
+
+.list-item {
+    padding: 0px 10px 0px 10px;
+    background-color: #122c4e;
+    border-radius: 5px;
+    width: 280px;
+}
+
+.list-item:hover {
+    background-color: #051933;
+}
+
+.interactable-icon {
+    background-color: #051933;
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    display: grid;
+}
+
+.about {
+    width: 50%;
 }
 
 /* Flexbox */
@@ -287,11 +319,11 @@ a {
     animation: 5s play infinite;
 }
 
-/* Animations */
-
 .button:hover {
     animation: pop-button 300ms forwards;
 }
+
+/* Animations */
 
 @keyframes color-section-change {
     0% {
