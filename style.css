@@ -91,8 +91,8 @@
     font-size: 22px;
 }
 
-.subtitle-animated {
-    animation: color-section-change 3s infinite;
+.animated {
+    animation: color-section-change 1s infinite;
     font-size: 22px;
 }
 
@@ -264,7 +264,7 @@ a {
 }
 
 .about {
-    width: 280px;
+    width: 60%;
 }
 
 /* Flexbox */
@@ -316,7 +316,7 @@ a {
 }
 
 .puzzle {
-    animation: 5s play infinite;
+    
 }
 
 .button:hover {
@@ -327,13 +327,13 @@ a {
 
 @keyframes color-section-change {
     0% {
-        text-shadow: #d6d6d6 1px 0 10px;
+        opacity: 1;
     }
     50% {
-        text-shadow: #474747 1px 0 10px;
+        opacity: 0;
     }
     to {
-        text-shadow: #d6d6d6 1px 0 10px;
+        opacity: 1;
     }
 }
 
@@ -363,25 +363,6 @@ a {
         background-color: #051933;
         padding: 30px;
         border-radius: 20px;
-    }
-}
-
-@keyframes play {
-    0% {
-        transform: rotateX(0deg);
-        transform: rotateZ(0deg);
-    }
-    25% {
-        transform: rotateX(180deg);
-    }
-    50% {
-        transform: rotateZ(180deg);
-    }
-    75% {
-        transform: rotateY(180deg);
-    }
-    100% {
-        transform: rotateZ(0deg);
     }
 }
 
