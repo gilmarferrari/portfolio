@@ -24,29 +24,29 @@
         </a>
         <h1 class="title white font">GILMAR FERRARI FILHO</h1>
         <div class="row">
-            <label class="caption white font">Desenvolvedor de Software</label>
-            <label class="caption animated white font">|</label>
+            <label class="caption primary font">Desenvolvedor de Software</label>
+            <label class="caption animated primary font">|</label>
         </div>
         <br>
         <div class="row middle gap-sm">
-            <i class="material-icons accent puzzle">extension</i>
-            <h4 class="caption accent font">SOBRE</h4>
+            <i class="material-icons light white puzzle">extension</i>
+            <h4 class="subtitle white light font">SOBRE</h4>
         </div>
         <div class="align-start">
             <div class="row gap-md block-row">
-                <a class="interactable-icon">
+                <a class="interactable-icon initial-icon" onclick="showAbout(1, this)">
                     <i class="material-icons white">school</i>
                 </a>
-                <h1 class="content center white font about">
-                    • Graduado em Jogos Digitais pela Faculdade da Serra Gaúcha.<br><br>
+                <h1 id="about-1" class="content center white font hideAbout">
                     • Pós-graduando em Big Data, Data Science e Data Analytics pela UNISINOS.<br><br>
+                    • Graduado em Jogos Digitais pela Faculdade da Serra Gaúcha.<br><br>
                 </h1>
             </div>
             <div class="row gap-md block-row">
-                <a class="interactable-icon">
+                <a class="interactable-icon initial-icon" onclick="showAbout(2, this)">
                     <i class="material-icons white">style</i>
                 </a>
-                <h1 class="content center white font about">
+                <h1 id="about-2" class="content center white font hideAbout">
                     • Ambição em aprofundar conhecimentos, participar de diversos
                     projetos e colocar grandes ideias em prática.<br><br>
                     • Capacidade de atuar relativamente bem com desenvolvimento full-stack,

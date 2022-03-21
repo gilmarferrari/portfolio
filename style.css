@@ -34,6 +34,16 @@
     background: #18283d;
 }
 
+::-moz-selection {
+    color: darkorange;
+    background-color: #fd87005d;
+}
+
+::selection {
+    color: darkorange;
+    background-color: #fd87005d;
+}
+
 .body {
     background: linear-gradient(-45deg, #8097d4 10%, #122c4e 90%);
     cursor: default;
@@ -112,6 +122,10 @@
 
 .accent {
     color: darkorange;
+}
+
+.primary {
+    color: #98aeec;
 }
 
 .align-start {
@@ -252,6 +266,9 @@ a {
 
 .list-item:hover {
     background-color: #051933;
+    border-right: 2px solid darkorange;
+    border-bottom: 2px solid darkorange;
+    text-shadow: #d6d6d6 1px 0 10px;
 }
 
 .interactable-icon {
@@ -263,8 +280,19 @@ a {
     display: grid;
 }
 
+.hideAbout {
+    display: none;
+}
+
 .about {
     width: 60%;
+    animation: 1s show-about forwards;
+}
+
+.initial-icon {
+    padding: 20px;
+    margin: 5px;
+    border: 3px solid #8097d4;
 }
 
 /* Flexbox */
@@ -315,15 +343,21 @@ a {
     padding: 5px;
 }
 
-.puzzle {
-    
-}
-
 .button:hover {
     animation: pop-button 300ms forwards;
 }
 
 /* Animations */
+
+@keyframes show-about {
+    0% {
+        margin-right: -100%;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes color-section-change {
     0% {
@@ -372,4 +406,14 @@ a {
         border: 0px;
         background-color: transparent;
     }
+}
+
+@font-face {
+    font-family: "JetBrainsMono";
+    src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2")
+            format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
 }
