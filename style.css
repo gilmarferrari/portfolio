@@ -262,12 +262,13 @@ a {
     background-color: #122c4e;
     border-radius: 5px;
     width: 280px;
+    border: 5px solid transparent;
 }
 
 .list-item:hover {
     background-color: #051933;
-    border-right: 2px solid darkorange;
-    border-bottom: 2px solid darkorange;
+    border-right: 5px solid darkorange;
+    border-bottom: 5px solid darkorange;
 }
 
 .interactable-icon {
