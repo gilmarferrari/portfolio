@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="assets/dashboard.png">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body class="body">
+    <section class="blocks-even">
+        <div class="block column gap-md space-between">
+            <div class="row gap-sm middle">
+                <i class="material-icons icon-md white">bar_chart</i>
+                <div class="column gap-min">
+                    <label class="font subtitle white caption">OVERVIEW</label>
+                    <label class="font subtitle white">DÓLAR x REAL</label>
+                </div>
+            </div>
+            <canvas id="overview" class="line-chart"></canvas>
+        </div>
+        <div class="block column gap-lg">
+            <div class="row gap-sm middle">
+                <i class="material-icons icon-sm white">query_stats</i>
+                <label class="font subtitle white">VARIAÇÃO DO DÓLAR (%)</label>
+            </div>
+            <canvas id="variation" class="line-chart"></canvas>
+        </div>
+        <div class="block column gap-lg">
+            <div class="row gap-sm middle">
+                <i class="material-icons icon-sm white">price_check</i>
+                <div class="column gap-min">
+                    <label class="font subtitle white caption">Overview</label>
+                    <label class="font subtitle white">IPCA (% DE 12 MESES)</label>
+                </div>
+            </div>
+            <canvas id="ipca" class="line-chart"></canvas>
+        </div>
+        <div class="block column gap-lg">
+            <div class="row gap-sm middle">
+                <i class="material-icons icon-sm white">attach_money</i>
+                <div class="column gap-min">
+                    <label class="font subtitle white caption">Overview</label>
+                    <label class="font subtitle white">Salário Mínimo</label>
+                </div>
+            </div>
+            <canvas id="minimumWage" class="line-chart"></canvas>
+        </div>
+        <div class="block column gap-lg">
+            <div class="row gap-sm middle">
+                <i class="material-icons-outlined icon-sm white">work_history</i>
+                <div class="column gap-min">
+                    <label class="font subtitle white caption">Overview</label>
+                    <label class="font subtitle white">Desemprego (%)</label>
+                </div>
+            </div>
+            <canvas id="unemployment" class="line-chart"></canvas>
+        </div>
+    </section>
+</body>
+</html>
