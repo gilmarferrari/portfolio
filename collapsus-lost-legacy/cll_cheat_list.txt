@@ -1,0 +1,23 @@
+// World Commands
+
+update world set time = day		(Set world time as day)
+update world set time = dusk		(Set world time as dusk)
+update world set time = night		(Set world time as night)
+
+// Player Commands
+
+update player set ap = max		(Set skill points to max)
+update player set xp = max		(Set xp to max)
+update player set lvl = max		(Set level to max)
+update player set rsc = max		(Set resources to max)
+update player set life = infinite	(Set player as immortal)
+update player set life = finite	(Set player as mortal)
+
+// Shotgun Commands
+
+update shotgun set ammo = infinite	(Set ammo as infinite)
+update shotgun set ammo = finite	(Set ammo as finite)
+
+// Teleport to Test Zone
+
+teleport to test				(Test)
