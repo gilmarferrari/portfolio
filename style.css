@@ -316,7 +316,6 @@ a {
     padding: 20px;
     margin: 5px;
     border: 3px solid #8097d4;
-    animation: 1.5s animate-button infinite linear;
 }
 
 /* Flexbox */
@@ -466,13 +465,6 @@ a {
         opacity: 0.3;
         border: 0px;
         background-color: transparent;
-    }
-}
-
-@keyframes animate-button {
-    50% {
-        transform: scale(0.9);
-        opacity: 0.3;
     }
 }
 
