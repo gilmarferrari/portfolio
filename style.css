@@ -377,7 +377,7 @@ a {
 }
 
 .typing-effect {
-  width: 26ch;
+  width: 25ch;
   animation: typing 2s steps(25) 0.5s, effect .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
