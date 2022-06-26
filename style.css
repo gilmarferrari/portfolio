@@ -13,7 +13,7 @@
     justify-content: space-around;
     align-items: center;
     vertical-align: bottom;
-    background-color: #18283dbe;
+    background-color: #18283d;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -184,14 +184,20 @@
 }
 
 .block {
+    transition-property: background-color padding border-radius;
+    transition-duration: 500ms;
     background-color: #18283d67;
     padding: 10px;
     height: max-content;
-    animation: unpop-card 500ms;
+    border-radius: 0px;
 }
 
 .block:hover {
-    animation: pop-card 500ms forwards;
+    transition-property: background-color padding border-radius;
+    transition-duration: 500ms;
+    background-color: #051933;
+    padding: 30px;
+    border-radius: 20px;
 }
 
 .block:hover .img-slide {
@@ -288,10 +294,11 @@ a {
 
 .list-item:hover {
     background-color: #051933;
-    transition-property: transform margin-right;
+    transition-property: transform margin-right margin-top;
     transition-duration: 300ms;
     transform: rotateZ(5deg);
     margin-right: 10px;
+    margin-top: -40px;
 }
 
 .interactable-icon {
@@ -378,8 +385,8 @@ a {
 }
 
 .typing-effect {
-  width: 25ch;
-  animation: typing 2s steps(25) 0.5s, effect .5s step-end infinite alternate;
+  width: 100%;
+  animation: typing 2s steps(25), effect 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
