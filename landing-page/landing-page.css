@@ -1,0 +1,112 @@
+body {
+    margin: 0px;
+    background-color: #2b2b2b;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navigation {
+    width: 100%;
+    height: 40px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.navigation a {
+    padding: 0px 20px 0px 20px;
+}
+
+.background-fade {
+    background-color: blueviolet;
+}
+
+.background-image {
+    width: 100%;
+    height: 100vh;
+    opacity: 0.8;
+    object-fit: cover;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-image: url('../assets/boats.jpg');
+}
+
+.background-dark {
+    background-color: #2b2b2b;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-alt {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100vh;
+}
+
+.footer {    
+    background-color: #2b2b2b;
+    width: 100%;
+    height: 160px;
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    font-size: 60px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: absolute;
+    margin-bottom: 200px;
+}
+
+.subtitle {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    width: 100%;
+    opacity: 0.8;
+    color: whitesmoke;
+    text-align: center;
+    position: absolute;
+    margin-bottom: 90px;
+}
+
+.column {    
+    display: flex;
+    flex-direction: column;
+}
+
+.align-middle {
+    justify-content: center;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b2b2b;
+}
+
+::-moz-selection {
+    color: #a26ec5;
+    background-color: #fd87005d;
+}
+
+::selection {
+    color: darkorange;
+    background-color: #fd87005d;
+}
