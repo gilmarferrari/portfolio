@@ -219,7 +219,8 @@
     width: 350px;
     object-fit: contain;
     background-color: #18283d67;
-    border: 1px solid #bebebe6b;
+    border: 1px solid #8096d45b;
+    box-shadow: #8096d427 3px 3px 0;
 }
 
 .gap-sm {
@@ -472,6 +473,7 @@ a {
     to {
         opacity: 0.3;
         border: 0px;
+        box-shadow: #8096d40e 0 0 0;
         background-color: transparent;
     }
 }
