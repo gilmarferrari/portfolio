@@ -148,7 +148,7 @@
 }
 
 .light {
-    text-shadow: #d6d6d68c 10px 8px 2px;
+    text-shadow: #d6d6d673 10px 8px 2px;
 }
 
 .shadow {
@@ -323,7 +323,7 @@ a {
 .initial-icon {
     padding: 20px;
     margin: 5px;
-    border: 3px solid white;
+    border: 3px solid #f1f1f1d3;
 }
 
 /* Flexbox */
