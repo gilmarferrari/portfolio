@@ -26,10 +26,11 @@
         "LoadMore": "Load more",
         "Yesterday": "Yesterday",
         "Today": "Today",
-        
+        "Copied": "Request copied",
+        "Deleted": "Deleted",        
         "Not just yet!": "Not just yet!",
         "Very soon this feature will be available": "Very soon this feature will be available",
-
+        "EmptyHistory": "No records were found in your history",
         
         "Method Not Allowed": "Usually, this means that the request type doesn't exist in the API.",
         "Unauthorized": "This means that an authentication is required. Probably your token is unset or expired.",
@@ -69,11 +70,11 @@
         "LoadMore": "Carregar mais",
         "Yesterday": "Ontem",
         "Today": "Hoje",
-
-
+        "Copied": "Requisição copiada",
+        "Deleted": "Excluído",
         "Not just yet!": "Acalma o coração!",
         "Very soon this feature will be available": "Em breve esta funcionalidade estará disponível",
-
+        "EmptyHistory": "Nenhum registro foi encontrado no seu histórico",
 
         "Method Not Allowed": "Normalmente, isso significa que o tipo dessa requisição não existe na API.",        
         "Unauthorized": "Isso significa que uma autenticação é necessária. Provavelmente seu token não foi definido ou expirou.",
