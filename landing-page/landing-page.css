@@ -29,6 +29,16 @@ a {
     padding: 0px 20px 0px 20px;
 }
 
+@media (max-width: 700px) {
+    .headline {
+        font-size: 28px !important;
+    }
+
+    .subheadline {
+        font-size: 12px !important;
+    }
+}
+
 @media (max-width: 500px) {
     .navigation {
         font-size: 11px;
@@ -36,6 +46,14 @@ a {
 
     .navigation a {
         padding: 0px 15px 0px 15px;
+    }
+
+    .headline {
+        font-size: 25px !important;
+    }
+
+    .subheadline {
+        font-size: 12px !important;
     }
 }
 
@@ -74,7 +92,8 @@ a {
 
 .background-alt {
     background-color: whitesmoke;
-    width: 100%;
+    min-width: 100%;
+    width: fit-content;
     height: 100vh;
     overflow: hidden;
 }
@@ -117,9 +136,9 @@ a {
 .subheadline {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
-    width: 100%;
     opacity: 0.8;
     color: #2b2b2b;
+    margin: 0px 20px 0px 20px;
 }
 
 .accent {
