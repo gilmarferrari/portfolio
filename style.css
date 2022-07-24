@@ -223,6 +223,14 @@
     box-shadow: #83838341 3px 3px 0;
 }
 
+.pixel-art {
+    height: 140px;
+    width: 290px;
+    padding: 30px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
 .gap-sm {
     gap: 10px;
 }

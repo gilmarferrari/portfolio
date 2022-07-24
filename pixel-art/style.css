@@ -1,0 +1,55 @@
+img {
+    padding: 10px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+}
+
+body {
+    background-color: black;
+}
+
+label {
+    padding: 10px;
+    color: white;
+    font-family: "JetBrains Mono";
+}
+
+.machines {
+    height: 100px;
+    background-color: lightgray;
+}
+
+.shotguns {
+    height: 50px;
+    background-color: lightgray;
+}
+
+.blocks {
+    height: 100px;
+    background-color: lightgray;
+}
+
+.nature {
+    height: 100px;
+    background-color: lightgray;
+}
+
+.objects {    
+    height: 80px;
+    background-color: lightgray;
+}
+
+.resources {
+    height: 80px;
+    background-color: lightgray;
+}
+
+.relics {
+    height: 100px;
+    background-color: lightgray;
+}
+
+.skins {
+    height: 100px;
+    background-color: lightgray;
+}
