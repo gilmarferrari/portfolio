@@ -29,6 +29,10 @@ a {
     padding: 0px 20px 0px 20px;
 }
 
+.navigation a:hover {
+    color: #be62f3;
+}
+
 @media (max-width: 700px) {
     .headline {
         font-size: 28px !important;
