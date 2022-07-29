@@ -23,6 +23,8 @@ a {
     align-items: center;
     font-size: 13px;
     z-index: 1;
+    transition: top 0.3s;
+    top: 0;
 }
 
 .navigation a {
@@ -186,7 +188,7 @@ a {
     background-color: blueviolet;
     border: none;
     padding: 10px 5px 10px 5px;
-    border-radius: 5px;
+    border-radius: 25px;
     font-size: 11px;
     margin-top: 20px;
 }
