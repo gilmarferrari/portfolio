@@ -8,7 +8,7 @@ function copyLink() {
 $.when(
     $.getJSON('https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/30?formato=json'),
     $.getJSON('https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json'),
-    $.getJSON(`https://api.bcb.gov.br/dados/serie/bcdata.sgs.1619/dados/?formato=json&dataInicial=01/01/1995&dataFinal=01/01${year}`),
+    $.getJSON(`https://api.bcb.gov.br/dados/serie/bcdata.sgs.1619/dados/?formato=json&dataInicial=01/01/1995&dataFinal=31/12${year}`),
     $.getJSON(`https://api.bcb.gov.br/dados/serie/bcdata.sgs.24369/dados?formato=json`),
 ).done(function (USD, IPCA, minimumWage, unemployment) {
     loadCharts([USD[0], IPCA[0], minimumWage[0], unemployment[0]]);
@@ -24,7 +24,7 @@ function loadCharts(data) {
     var IPCA = data[1].map(i => i.valor);
     var IPCAperiod = data[1].map(i => i.data);
     var minimumWagePeriod = data[2].map(i => new Date(i.data).getFullYear()).filter(onlyUnique);
-    var minimumWage = data[2].filter(i => minimumWagePeriod.map(y => `01/05/${y}`).includes(i.data)).map(i => i.valor);
+    var minimumWage = data[2].filter(i => minimumWagePeriod.map(y => `01/07/${y}`).includes(i.data)).map(i => i.valor);
     var unemployment = data[3];
     console.log(data[2])
 
