@@ -394,8 +394,7 @@ a {
 }
 
 .typing-effect {
-  width: 100%;
-  animation: typing 2s steps(25), effect 0.5s step-end infinite alternate;
+  animation: typing 6s steps(25) infinite, effect 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -405,6 +404,15 @@ a {
 
 @keyframes typing {
   from {
+    width: 0
+  }
+  40% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  to {    
     width: 0
   }
 }
