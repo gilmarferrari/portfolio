@@ -12,25 +12,25 @@ window.onload = changeLabel;
 function changeLabel() {
     var label = document.getElementById('label');
 
+    if (!label.classList.contains('typing-effect')) {
+        label.classList.add('typing-effect');
+    }
+
     switch (index) {
         case 0:
             label.innerText = 'Desenvolvedor de Software';
-            index ++;
+            index++;
             break;
         case 1:
             label.innerText = '<html> Desenvolvedor Web </html>';
-            index ++;
+            index++;
             break;
         case 2:
             label.innerText = '<xml> Desenvolvedor Mobile </xml>';
-            index ++;
+            index++;
             break;
         case 3:
             label.innerText = '../Desenvolvedor de Jogos/';
-            index ++;
-            break;
-            case 4:
-            label.innerText = 'SELECT * FROM TbPortfolio';
             index = 0;
             break;
     }
