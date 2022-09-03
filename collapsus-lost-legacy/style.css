@@ -82,7 +82,7 @@ a {
 }
 
 .caption {
-    color: burlywood;
+    color: orange;
     justify-content: center;
     align-items: center;
     font-size: 15px;
@@ -97,7 +97,7 @@ a {
 }
 
 .enhance {
-    color: orange;
+    color: rgb(253, 180, 97);
     font-weight: 400;
     font-size: 15px;
 }
