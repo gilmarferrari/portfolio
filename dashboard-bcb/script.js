@@ -19,7 +19,7 @@ function loadCharts(data) {
     var USDperiod = data[0].map(i => i.data);
     var variation = [];
     for (let i = 0; i < data[0]?.length; i++) {
-        variation.push({ x: i + 1, y: (data[0][i]?.valor ?? 1) / (data[0][i - 1]?.valor ?? data[0][i]?.valor) });
+        variation.push({ x: i + 1, y: (((data[0][i]?.valor ?? 1) / (data[0][i - 1]?.valor ?? data[0][i]?.valor) - 1) * 100).toFixed(2) });
     }
     var IPCA = data[1].map(i => i.valor);
     var IPCAperiod = data[1].map(i => i.data);
