@@ -12,11 +12,11 @@ function changeLanguage() {
     switch (language) {
         case 'PT-BR':
             language = 'EN-US'
-            window.location.href = 'https://gilmarferrari.github.io/portfolio/en/';
+            window.location.href = engPage;
             break;
         case 'EN-US':
             language = 'PT-BR'
-            window.location.href = 'https://gilmarferrari.github.io/portfolio/';
+            window.location.href = portPage;
             break;
     }
 
@@ -29,10 +29,24 @@ function getLanguage() {
     label.innerText = localStorage.getItem('lang') ?? 'PT-BR';
 }
 
+function initLanguage() {
+    var language = localStorage.getItem('lang') ?? 'PT-BR';
+
+    if (language == 'PT-BR' && window.location.href != portPage) {
+        window.location.href = portPage;
+    }
+    else if (language == 'EN-US' && window.location.href != engPage) {
+        window.location.href = engPage;
+    }
+}
+
 var index = 0;
+const portPage = 'https://gilmarferrari.github.io/portfolio/';
+const engPage = 'https://gilmarferrari.github.io/portfolio/en/';
 window.onload = onInit;
 
 function onInit() {
+    initLanguage();
     getLanguage();
     changeLabel();
 }
