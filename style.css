@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: row;
     padding: 20px;
-    justify-content: space-around;
+    justify-content: end;
     align-items: center;
 }
 
 .footer {
     display: flex;
     flex-direction: row;
-    padding: 30px 0px 40px 0px;
+    padding: 50px 0px 50px 0px;
     justify-content: space-around;
     align-items: center;
     vertical-align: bottom;
@@ -18,6 +18,10 @@
     left: 0px;
     right: 0px;
     height: 20px;
+}
+
+.wave {
+    margin-bottom: -10px;
 }
 
 ::-webkit-scrollbar {
@@ -272,7 +276,7 @@ a {
     padding: 30px;
     line-height: 30px;
     width: 85%;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid gray;
 }
 
 .timeline-text {
@@ -308,6 +312,36 @@ a {
     transform: rotateZ(5deg);
     margin-right: 10px;
     margin-top: -40px;
+}
+
+.icon {
+    font-size: 16px !important;
+    height: 16px;
+    width: 16px;
+}
+
+.lang-code {
+    transition: width white-space overflow;
+    transition-duration: 200ms;
+    width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.language-button {
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    padding: 10px 0px 10px 10px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: darkorange;
+}
+
+.language-button:hover .lang-code {
+    transition: width;
+    transition-duration: 500ms;
+    padding-right: 10px;
+    width: 100%;
 }
 
 .interactable-icon {
@@ -387,40 +421,43 @@ a {
 }
 
 .typing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
 }
 
 .typing-effect {
-  animation: typing 6s steps(25) infinite, effect 0.5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
+    animation: typing 6s steps(25) infinite, effect 0.5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
 }
 
 /* Animations */
 
 @keyframes typing {
-  from {
-    width: 0
-  }
-  40% {
-    width: 100%;
-  }
-  60% {
-    width: 100%;
-  }
-  to {    
-    width: 0
-  }
+    from {
+        width: 0
+    }
+
+    40% {
+        width: 100%;
+    }
+
+    60% {
+        width: 100%;
+    }
+
+    to {
+        width: 0
+    }
 }
-    
+
 @keyframes effect {
-  50% {
-    border-color: transparent
-  }
+    50% {
+        border-color: transparent
+    }
 }
 
 @keyframes show-about {
@@ -428,6 +465,7 @@ a {
         margin-right: -100%;
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -437,9 +475,11 @@ a {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -449,6 +489,7 @@ a {
     0% {
         transform: translateY(0%);
     }
+
     to {
         background-color: darkorange;
         border-radius: 5px;
@@ -467,6 +508,7 @@ a {
     0% {
         transform: translateY(0%);
     }
+
     to {
         background-color: #051933;
         padding: 30px;
@@ -480,6 +522,7 @@ a {
         padding: 30px;
         border-radius: 20px;
     }
+
     to {
         transform: translateY(0%);
     }
@@ -496,8 +539,7 @@ a {
 
 @font-face {
     font-family: "JetBrainsMono";
-    src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2")
-            format("woff2"),
+    src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2") format("woff2"),
         url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff") format("woff"),
         url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf") format("truetype");
     font-weight: 400;
