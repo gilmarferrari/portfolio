@@ -12,11 +12,11 @@ function changeLanguage() {
     switch (language) {
         case 'PT-BR':
             language = 'EN-US'
-            window.location.href = 'https://gilmarferrari.github.io/portfolio/';
+            window.location.href = 'https://gilmarferrari.github.io/portfolio/en/';
             break;
         case 'EN-US':
             language = 'PT-BR'
-            window.location.href = 'https://gilmarferrari.github.io/portfolio/en/';
+            window.location.href = 'https://gilmarferrari.github.io/portfolio/';
             break;
     }
 
