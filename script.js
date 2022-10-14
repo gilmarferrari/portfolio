@@ -6,9 +6,7 @@ function showAbout(number, parent) {
     parent.classList.remove('initial-icon');
 }
 
-function changeLanguage() {
-    var language = localStorage.getItem('lang') ?? 'PT-BR';
-
+function changeLanguage(language) {
     switch (language) {
         case 'PT-BR':
             language = 'EN-US'
@@ -25,8 +23,8 @@ function changeLanguage() {
 }
 
 function getLanguage() {
-    var label = document.getElementById('lang-code');
-    label.innerText = localStorage.getItem('lang') ?? 'PT-BR';
+    var select = document.getElementById('lang-code');
+    select.value = localStorage.getItem('lang') ?? 'PT-BR';
 }
 
 function initLanguage() {
