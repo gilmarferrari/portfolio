@@ -33,8 +33,15 @@ var index = 0;
 window.onload = onInit;
 
 function onInit() {
-    if (localStorage.getItem('lang') == null) {
-        localStorage.setItem('lang', 'PT-BR');
+    var language = localStorage.getItem('lang') ?? 'PT-BR';
+
+    switch (language) {
+        case 'PT-BR':
+            window.location.href = 'https://gilmarferrari.github.io/portfolio/';
+            break;
+        case 'EN-US':
+            window.location.href = 'https://gilmarferrari.github.io/portfolio/en/';
+            break;
     }
 
     getLanguage();
