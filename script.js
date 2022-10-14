@@ -9,12 +9,12 @@ function showAbout(number, parent) {
 function changeLanguage(language) {
     switch (language) {
         case 'PT-BR':
-            language = 'EN-US'
-            window.location.href = engPage;
-            break;
-        case 'EN-US':
             language = 'PT-BR'
             window.location.href = portPage;
+            break;
+        case 'EN-US':
+            language = 'EN-US'
+            window.location.href = engPage;
             break;
     }
 
@@ -55,7 +55,7 @@ function changeLabel() {
     if (!label.classList.contains('typing-effect')) {
         label.classList.add('typing-effect');
     }
-    
+
     var language = localStorage.getItem('lang') ?? 'PT-BR';
 
     switch (index) {
