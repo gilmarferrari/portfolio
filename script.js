@@ -33,6 +33,10 @@ var index = 0;
 window.onload = onInit;
 
 function onInit() {
+    if (localStorage.getItem('lang') == null) {
+        localStorage.setItem('lang', 'PT-BR');
+    }
+
     getLanguage();
     changeLabel();
 }
