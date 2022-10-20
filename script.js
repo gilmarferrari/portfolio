@@ -44,7 +44,7 @@ const engPage = 'https://gilmarferrari.github.io/portfolio/en/';
 window.onload = onInit;
 
 function onInit() {
-    //initLanguage();
+    initLanguage();
     getLanguage();
     changeLabel();
 }
