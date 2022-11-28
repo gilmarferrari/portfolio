@@ -139,13 +139,15 @@ a {
     width: 100%;
     color: #2b2b2b;
     padding: 10px;
+    font-weight: 600;
+    line-height: 1;
 }
 
 .subheadline {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     opacity: 0.8;
-    color: #2b2b2b;
+    color: #4a4a4a;
     margin: 0px 20px 0px 20px;
 }
 
@@ -164,7 +166,6 @@ a {
 
 .accent {
     color: blueviolet;
-    font-weight: 600;
 }
 
 .white {
@@ -182,15 +183,25 @@ a {
 }
 
 .more-about {
+    transition-property: color background-color;
+    transition-duration: 500ms;
     width: 200px;
     align-self: center;
     color: whitesmoke;
     background-color: blueviolet;
-    border: none;
+    border: 1px solid blueviolet;
     padding: 10px 5px 10px 5px;
     border-radius: 25px;
-    font-size: 11px;
+    font-size: 15px;
+    font-weight: 500;
     margin-top: 20px;
+}
+
+.more-about:hover {
+    transition-property: color background-color;
+    transition-duration: 500ms;
+    color: blueviolet;
+    background-color: transparent;
 }
 
 .gap-md {
