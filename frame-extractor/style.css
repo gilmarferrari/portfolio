@@ -1,0 +1,109 @@
+body {
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    margin: 40px;
+    background: linear-gradient(-135deg, rgb(145, 103, 221, 0.1) 0, rgb(145, 103, 221, 0.1) 20%,
+            white 20%, white 80%, rgb(145, 103, 221, 0.2) 80%, rgb(145, 103, 221, 0.2) 100%);
+}
+
+.center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.info {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+}
+
+.small {
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.play-icon {
+    height: 120px;
+    width: 120px;
+}
+
+.video-player {
+    width: 400px;
+    max-width: 85%;
+    border: 2px dotted lightgrey;
+    padding: 3px;
+}
+
+a {
+    text-decoration: none;
+    transition-property: color background-color;
+    transition-duration: 500ms;
+    width: 180px;
+    align-self: center;
+    color: rgb(145, 103, 221);
+    background-color: transparent;
+    border: 1px solid rgb(145, 103, 221);
+    padding: 8px 5px 8px 5px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.alt-button {
+    color: white;
+    background-color: rgb(145, 103, 221);
+    font-weight: normal;
+    border: none;
+}
+
+.alt-button-disabled {
+    user-select: none;
+    pointer-events: none;
+    color: white;
+    background-color: lightgray;
+    font-weight: normal;
+    border: none;
+}
+
+.slider {
+    appearance: none;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: rgb(145, 103, 221);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: rgb(145, 103, 221);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#fps-div {
+    flex-direction: column;
+}

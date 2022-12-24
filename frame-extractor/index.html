@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Extractor</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="../assets/play.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="extensions/jszip.js"></script>
+    <script src="extensions/filesaver.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <div class="center">
+        <img id="play-icon" class="play-icon" src="../assets/play.png">
+        <video id="video" class="video-player" controls hidden>
+            <source id="video-source" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>
+            <label class="info">Extract and download the frames from a video</label>
+            <br>
+            <label class="small">The video never leaves your machine</label>
+        </p>
+        <br>
+        <a id="upload-button" href="javascript: uploadVideo()">Upload Video</a>
+        <br>
+        <div id="fps-div" hidden>
+            <input type="range" min="1" max="60" value="30" class="slider" id="fps-slider" oninput="changeFps()">
+            <output id="fps-output" class="small">FPS: 30</output>
+            <br>
+        </div>
+        <a id="download-button" class="alt-button" href="javascript: downloadImages()" hidden>Download Images</a>
+        <input type="file" accept="video/*" id="video-input" hidden onchange="onVideoUpload()">
+        <br>
+        <label class="small" id="progress" hidden></label>
+    </div>
+</body>
+
+</html>
