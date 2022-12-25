@@ -1,3 +1,27 @@
+var videoUrl = null;
+var fps = 30;
+var player = null;
+var icon = null;
+var downloadButton = null;
+var uploadButton = null;
+var fpsDiv = null;
+var slider = null;
+var fpsOutput = null;
+var progress = null;
+
+window.onload = onInit;
+
+function onInit() {
+    this.player = document.getElementById("video");
+    this.icon = document.getElementById("play-icon");
+    this.downloadButton = document.getElementById("download-button");
+    this.uploadButton = document.getElementById("upload-button");
+    this.fpsDiv = document.getElementById("fps-div");
+    this.slider = document.getElementById("fps-slider");
+    this.fpsOutput = document.getElementById("fps-output");
+    this.progress = document.getElementById("progress");
+}
+
 function uploadVideo() {
     document.getElementById('video-input').click();
 }
@@ -5,39 +29,31 @@ function uploadVideo() {
 function onVideoUpload() {
     var video = document.getElementById('video-input').files[0];
     this.videoUrl = window.URL.createObjectURL(video);
+    this.player.src = videoUrl;
 
-    var player = document.getElementById("video");
-    var icon = document.getElementById("play-icon");
-    var downloadButton = document.getElementById("download-button");
-    var fpsDiv = document.getElementById("fps-div");
-    player.src = videoUrl;
+    this.player.style.display = "block";
+    this.icon.style.display = "none";
+    this.downloadButton.style.display = "block";
+    this.fpsDiv.style.display = "flex";
 
-    player.style.display = "block";
-    icon.style.display = "none";
-    downloadButton.style.display = "block";
-    fpsDiv.style.display = "flex";
-
-    player.play();
+    this.player.play();
 }
 
 function changeFps() {
-    var slider = document.getElementById("fps-slider");
-    this.fps = slider.value;
-    var fpsOutput = document.getElementById("fps-output");
-    fpsOutput.value = `FPS: ${this.fps}`;
+    this.fps = this.slider.value;
+    this.fpsOutput.value = `FPS: ${this.fps}`;
 }
 
-var videoUrl = null;
-var fps = 30;
-
 async function downloadImages() {
-    let videoBlob = await fetch(videoUrl).then((r) => r.blob());
-    let videoObjectUrl = URL.createObjectURL(videoBlob);
-    let player = document.createElement("video");
+    var videoBlob = await fetch(videoUrl).then((r) => r.blob());
+    var videoObjectUrl = URL.createObjectURL(videoBlob);
+    var player = document.createElement("video");
 
-    let seekResolve;
+    var seekResolve;
     player.addEventListener("seeked", async function () {
-        if (seekResolve) seekResolve();
+        if (seekResolve) {
+            seekResolve();
+        };
     });
 
     player.src = videoObjectUrl;
@@ -47,18 +63,18 @@ async function downloadImages() {
         player.currentTime = 10000000 * Math.random();
     }
 
-    let zip = new JSZip();
-    let folder = zip.folder('collection');
+    var zip = new JSZip();
+    var folder = zip.folder('collection');
 
-    let canvas = document.createElement("canvas");
-    let context = canvas.getContext("2d");
-    let [width, height] = [player.videoWidth, player.videoHeight];
+    var canvas = document.createElement("canvas");
+    var context = canvas.getContext("2d");
+    var [width, height] = [player.videoWidth, player.videoHeight];
     canvas.width = width;
     canvas.height = height;
 
-    let interval = 1 / this.fps;
-    let currentTime = 0;
-    let duration = player.duration;
+    var interval = 1 / this.fps;
+    var currentTime = 0;
+    var duration = player.duration;
 
     disableButtons();
 
@@ -69,7 +85,7 @@ async function downloadImages() {
         context.drawImage(player, 0, 0, width, height);
         image = canvas.toDataURL();
 
-        folder.file(`${currentTime}.png`, dataURLtoFile(image, `${currentTime}.png`));
+        folder.file(`${Date.now()}.png`, dataURLtoFile(image, `${currentTime}.png`));
 
         currentTime += interval;
         setProgress(`Extraídos ${Math.round(currentTime * this.fps)} de ${Math.round(duration * this.fps)} frames`);
@@ -84,30 +100,20 @@ async function downloadImages() {
 }
 
 function setProgress(text) {
-    var progress = document.getElementById("progress");
-    progress.innerText = text;
+    this.progress.innerText = text;
 }
 
 function enableButtons() {
-    var downloadButton = document.getElementById("download-button");
-    var uploadButton = document.getElementById("upload-button");
-    var progress = document.getElementById("progress");
-
-    downloadButton.classList.replace("alt-button-disabled", "alt-button");
-    uploadButton.classList.remove("alt-button-disabled");
-    progress.style.display = "none";
+    this.downloadButton.classList.replace("alt-button-disabled", "alt-button");
+    this.uploadButton.classList.remove("alt-button-disabled");
+    this.progress.style.display = "none";
 }
 
 function disableButtons() {
-    var downloadButton = document.getElementById("download-button");
-    var uploadButton = document.getElementById("upload-button");
-    var progress = document.getElementById("progress");
-    var fpsDiv = document.getElementById("fps-div");
-
-    downloadButton.classList.replace("alt-button", "alt-button-disabled");
-    uploadButton.classList.add("alt-button-disabled");
-    progress.style.display = "block";
-    fpsDiv.style.display = "none";
+    this.downloadButton.classList.replace("alt-button", "alt-button-disabled");
+    this.uploadButton.classList.add("alt-button-disabled");
+    this.progress.style.display = "block";
+    this.fpsDiv.style.display = "none";
 }
 
 function dataURLtoFile(dataurl, filename) {
