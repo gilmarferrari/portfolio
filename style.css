@@ -320,41 +320,8 @@ a {
     width: 16px;
 }
 
-.lang-code {
-    transition: width white-space overflow;
-    transition-duration: 200ms;
-    width: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    background-color: transparent;
-    border: none;
-}
-
 *:focus {
     outline: none;
-}
-
-option {
-    background-color: orange;
-}
-
-.language-button {
-    position: fixed;
-    top: 20px;
-    left: 0px;
-    padding: 10px 0px 10px 10px;
-    border-radius: 0px 10px 10px 0px;
-    background-color: #779faf;
-}
-
-.language-button:hover .lang-code {
-    transition: width;
-    transition-duration: 500ms;
-    width: 100%;
-}
-
-.language-button:hover {
-    padding-right: 10px;
 }
 
 .interactable-icon {
