@@ -25,15 +25,18 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #203741c7;
+    background: transparent;
+    border: solid 3px transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     background: whitesmoke;
+    border-radius: 24px;
+    border: solid 3px #35525e;
 }
 
 ::-moz-selection {

@@ -30,7 +30,7 @@ function changeLabel() {
             index++;
             break;
         case 2:
-            label.innerText = '<xml> Desenvolvedor Mobile </xml>';
+            label.innerText = 'const Text("Desenvolvedor Mobile")';
             index++;
             break;
         case 3:
