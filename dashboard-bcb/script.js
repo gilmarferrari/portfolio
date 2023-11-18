@@ -1,10 +1,5 @@
 const year = new Date().getFullYear();
 
-function copyLink() {
-    navigator.clipboard.writeText('gilmarferrari.github.io/Dashboard/');
-    window.alert('Link copiado com sucesso!');
-}
-
 $.when(
     $.getJSON('https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/30?formato=json'),
     $.getJSON('https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados/ultimos/12?formato=json'),
@@ -18,9 +13,11 @@ function loadCharts(data) {
     var amount = data[0].map(i => i.valor);
     var USDperiod = data[0].map(i => i.data);
     var variation = [];
+
     for (let i = 0; i < data[0]?.length; i++) {
         variation.push({ x: i + 1, y: (((data[0][i]?.valor ?? 1) / (data[0][i - 1]?.valor ?? data[0][i]?.valor) - 1) * 100).toFixed(2) });
     }
+    
     var IPCA = data[1].map(i => i.valor);
     var IPCAperiod = data[1].map(i => i.data);
     var minimumWagePeriod = data[2].map(i => new Date(i.data).getFullYear()).filter(onlyUnique);

@@ -1,5 +1,5 @@
 .body {
-    background: linear-gradient(90deg, #35525e 95%, white 5%);
+    background-color: #35525e;
     overflow-x: hidden;
 }
 
@@ -86,6 +86,7 @@ a {
     justify-content: center;
     align-items: center;
     font-size: 15px;
+    letter-spacing: 1px;
 }
 
 .bar {
@@ -94,12 +95,6 @@ a {
     background-color: #233b46;
     color: white;
     font-weight: 400;
-}
-
-.enhance {
-    color: rgb(253, 180, 97);
-    font-weight: 400;
-    font-size: 15px;
 }
 
 .light {
@@ -175,15 +170,9 @@ a {
     width: 80%;
 }
 
-.item-carousel:hover {
-    transition: transform 300ms;
-    transform: translateX(-20px);
-}
-
 .item-carousel {    
     transition: transform 300ms;
     transform: rotateZ(0deg);
-    border-right: 6px solid #233b46;
     background-color: whitesmoke;
     padding: 5px 5px 0px 5px;
 }
