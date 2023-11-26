@@ -121,6 +121,10 @@ a {
     text-align: end;
 }
 
+.content-max-width {
+    max-width: 650px;
+}
+
 .font {
     font-family: 'Poppins', sans-serif;
 }
