@@ -256,6 +256,10 @@ a {
     color: transparent;
 }
 
+.link {
+    color: #83CCEB;
+}
+
 .timeline {
     height: fit-content;
 }
