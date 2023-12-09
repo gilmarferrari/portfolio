@@ -2,9 +2,11 @@
     "English": {
         "Body": "Body",
         "Headers": "Headers",
+        "Others": "Others",
         "Response": "Response",
         "Authorization": "Authorization",
         "BearerToken": "Bearer Token",
+        "RepeatRequest": "Repeat Request",
         "Language": "Language",
         "Login": "Login",
         "JSON": "JSON",
@@ -49,9 +51,11 @@
     "Portuguese": {
         "Body": "Corpo",
         "Headers": "Cabeçalho",
+        "Others": "Outros",
         "Response": "Resposta",
         "Authorization": "Autorização",
         "BearerToken": "Token Bearer",
+        "RepeatRequest": "Repetir requisição",
         "Language": "Idioma",
         "Login": "Entrar",
         "JSON": "JSON",
