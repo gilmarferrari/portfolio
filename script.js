@@ -11,6 +11,15 @@ window.onload = onInit;
 
 function onInit() {
     changeLabel();
+
+    $.when($.getJSON('https://api.github.com/repos/gilmarferrari/Plan-It/releases/latest')).done(function (latestRelease) {
+        var apkAsset = latestRelease?.assets?.filter(a => a.content_type == 'application/vnd.android.package-archive')[0]
+        
+        if (apkAsset) {
+            var planItDownloadUrl = apkAsset.browser_download_url;
+            document.getElementById('plan-it-download-button').href = planItDownloadUrl;
+        }
+    });
 }
 
 function changeLabel() {
